@@ -1,0 +1,16 @@
+# GUILD — proxy inverso + TLS automático con Caddy (RECOMENDADO, ver RUNBOOK)
+# Copiar a /etc/caddy/Caddyfile en el VPS, sustituir el dominio y recargar:
+#   sudo systemctl reload caddy
+# Caddy obtiene y renueva el certificado Let's Encrypt solo (ACME).
+# Requisito: el DNS del dominio ya apunta al VPS y los puertos 80/443
+# están abiertos (80 es necesario para el desafío ACME).
+registry.example.com {
+	reverse_proxy 127.0.0.1:8787
+	encode gzip
+	# El stream SSE (GET /v1/events) no debe amortiguarse:
+	# Caddy no bufferiza reverse_proxy por defecto; no añadir flush_interval -1
+	# salvo que se quiera latencia mínima a costa de mantener la conexión.
+	log {
+		output file /var/log/caddy/guild.log
+	}
+}

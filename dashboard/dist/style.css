@@ -1,0 +1,10 @@
+.gu-page { max-width: 920px; margin: 0 auto; padding: 24px 16px 48px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #1d2733; }
+.gu-head h1 { font-size: 30px; margin: 0 0 4px; letter-spacing: .5px; }
+.gu-head p { opacity: .72; margin: 0 0 20px; }
+.gu-card { background: #f7f5ff; border: 1px solid #ddd6fe; border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; }
+.gu-card h3 { margin: 0 0 10px; font-size: 17px; color: #4c1d95; }
+.gu-meta { opacity: .75; font-size: 13.5px; margin: 6px 0 0; }
+.gu-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.gu-table th, .gu-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e4defc; vertical-align: top; }
+.gu-table td:last-child { font-variant-numeric: tabular-nums; }
+.gu-foot { opacity: .65; font-size: 13px; text-align: center; margin-top: 8px; }

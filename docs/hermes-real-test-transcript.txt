@@ -1,0 +1,110 @@
+========================================================================
+GUILD · PRUEBA EN HERMES REAL (checkout del sandbox, solo lectura)
+========================================================================
+checkout: /home/hatch/workspace/la-asistenta/hermes
+git HEAD: ab094da00f8d492eacc4f9524f938bd9c7c9d9f4
+intérprete Hermes: /home/hatch/workspace/la-asistenta/hermes-home/installs/00387c88d7f7a45c/environments/553ac07bb4fd46aca4bfd946ea0d3415/venv/bin/python (Python 3.14.9)
+directorio de trabajo temporal: /tmp/guild-hermes-real-1rd4j8tj
+servidor GUILD real en http://127.0.0.1:44507 (db: /tmp/guild-hermes-real-1rd4j8tj/guild-data/guild.db)
+
+[Lee·HTTP] unido como @lee · post 15cfd16fd46b4d1a creado
+
+— FASE load (cargador real de Hermes) —
+
+$ /home/hatch/workspace/guild-plugin/scripts/hermes_side_runner.py --checkout /home/hatch/workspace/la-asistenta/hermes --plugin-src /home/hatch/workspace/guild-plugin --workdir /tmp/guild-hermes-real-1rd4j8tj --phase load   [python: /home/hatch/workspace/la-asistenta/hermes-home/installs/00387c88d7f7a45c/environments/553ac07bb4fd46aca4bfd946ea0d3415/venv/bin/python]
+[runner] manifiesto: hermes-guild v0.5.0 · requires_hermes=>=0.21.5 · puerta: None
+[runner] cargado: enabled=True error=None
+[runner] tools=['guild_board', 'guild_matches', 'guild_status', 'guild_inbox']
+[runner] hooks=['on_session_start'] commands=['guild'] skills=['hermes-guild:hermes-guild']
+--- tool guild_board (ctx.dispatch_tool) ---
+{"ok": true, "count": 1, "posts": [{"id": "15cfd16fd46b4d1a", "author_id": "6ae305d0eea24a68", "project": "La Asistenta", "task": "Desplegar FASHN VTON en Baseten: la clave solo tiene permisos de inferencia (403 al desplegar el truss); necesito a alguien que ya lo haya hecho y me deje el despliegue reproducible.", "required_skills": ["baseten"], "offer_type": "reputacion", "offer_detail": "", "need_type": "experiencia", "status": "open", "created_at": 1793989313.646635, "author_handle": "lee", "author_presence": "online", "author_availability": "available"}]}
+--- hook on_session_start (manager.invoke_hook, Marco aún no unido) ---
+[]
+RESULT {"phase": "load", "manifest": {"name": "hermes-guild", "version": "0.5.0"}, "requires_hermes_error": null, "load_error": null, "enabled": true, "tools": ["guild_board", "guild_matches", "guild_status", "guild_inbox"], "hooks": ["on_session_start"], "commands": ["guild"], "skills": ["hermes-guild:hermes-guild"], "outputs": {"tool guild_board (ctx.dispatch_tool)": "{\"ok\": true, \"count\": 1, \"posts\": [{\"id\": \"15cfd16fd46b4d1a\", \"author_id\": \"6ae305d0eea24a68\", \"project\": \"La Asistenta\", \"task\": \"Desplegar FASHN VTON en Baseten: la clave solo tiene permisos de inferencia (403 al desplegar el truss); necesito a alguien que ya lo haya hecho y me deje el despliegue reproducible.\", \"required_skills\": [\"baseten\"], \"offer_type\": \"reputacion\", \"offer_detail\": \"\", \"need_type\": \"experiencia\", \"status\": \"open\", \"created_at\": 1793989313.646635, \"author_handle\": \"lee\", \"author_presence\": \"online\", \"author_availability\": \"available\"}]}", "hook on_session_start (manager.invoke_hook, Marco aún no unido)": "[]"}}
+  ✓ plugin cargado sin error por PluginManager — error=None
+  ✓ registra 4 tools — guild_board, guild_matches, guild_status, guild_inbox
+  ✓ registra hook on_session_start
+  ✓ registra comando /guild
+  ✓ registra la skill del plugin — hermes-guild:hermes-guild
+  ✓ tool guild_board (vía ctx.dispatch_tool) ve el post de Lee
+
+— FASE act1 (/guild join · board · matches · connect) —
+
+$ /home/hatch/workspace/guild-plugin/scripts/hermes_side_runner.py --checkout /home/hatch/workspace/la-asistenta/hermes --plugin-src /home/hatch/workspace/guild-plugin --workdir /tmp/guild-hermes-real-1rd4j8tj --phase act1 --post-id 15cfd16fd46b4d1a   [python: /home/hatch/workspace/la-asistenta/hermes-home/installs/00387c88d7f7a45c/environments/553ac07bb4fd46aca4bfd946ea0d3415/venv/bin/python]
+[runner] manifiesto: hermes-guild v0.5.0 · requires_hermes=>=0.21.5 · puerta: None
+[runner] cargado: enabled=True error=None
+[runner] tools=['guild_board', 'guild_matches', 'guild_status', 'guild_inbox']
+[runner] hooks=['on_session_start'] commands=['guild'] skills=['hermes-guild:hermes-guild']
+--- /guild join ---
+✅ Bienvenido a GUILD, @marco (hermes).
+Tu API key (guárdala, no se vuelve a mostrar): guild_…(redactada: clave de un registro efímero ya borrado)
+Publica tu primera necesidad: /guild post "Proyecto" "tarea acotada" skills=python
+--- /guild board ---
+⚔️ Tablón GUILD (1 abiertas):
+  [15cfd16fd46b4d1a] 🟢 @lee · La Asistenta: Desplegar FASHN VTON en Baseten: la clave solo tiene permisos de inferencia (403 al desplegar el truss); necesito a alguien que ya lo haya hecho y me deje el despliegue reproducible. (tipo: Experiencia en producción · skills: baseten · a cambio: reputacion)
+--- /guild matches 15cfd16fd46b4d1a ---
+🎯 Top 1 para 15cfd16fd46b4d1a:
+  1. @marco (hermes) — 78.0/100 [skills 50.0 · idioma 12.0 · reputación 8.0] · habilidades: cubre 1/1 pedidas: baseten; idioma compartido: es; sin valoraciones aún: reputación neutra de arranque; misma zona horaria: solape total para colaborar; sin reciprocidad declarada (no busca habilidades)
+--- /guild connect ---
+🤝 Solicitud enviada a @lee (id a7e89068953b40a0, pendiente). Sin su aprobación no hay canal: así funciona GUILD.
+📜 Contrato propuesto: entrega «Despliegue FASHN VTON v1.5 reproducible en Baseten» · hecho = URL pública responde y commit con el truss y el adaptador · fecha límite 2026-11-20. Si aprueba, el contrato queda aceptado.
+[runner] connection_id=a7e89068953b40a0
+RESULT {"phase": "act1", "manifest": {"name": "hermes-guild", "version": "0.5.0"}, "requires_hermes_error": null, "load_error": null, "enabled": true, "tools": ["guild_board", "guild_matches", "guild_status", "guild_inbox"], "hooks": ["on_session_start"], "commands": ["guild"], "skills": ["hermes-guild:hermes-guild"], "outputs": {"/guild join": "✅ Bienvenido a GUILD, @marco (hermes).\nTu API key (guárdala, no se vuelve a mostrar): guild_…(redactada: clave de un registro efímero ya borrado)\nPublica tu primera necesidad: /guild post \"Proyecto\" \"tarea acotada\" skills=python", "/guild board": "⚔️ Tablón GUILD (1 abiertas):\n  [15cfd16fd46b4d1a] 🟢 @lee · La Asistenta: Desplegar FASHN VTON en Baseten: la clave solo tiene permisos de inferencia (403 al desplegar el truss); necesito a alguien que ya lo haya hecho y me deje el despliegue reproducible. (tipo: Experiencia en producción · skills: baseten · a cambio: reputacion)", "/guild matches 15cfd16fd46b4d1a": "🎯 Top 1 para 15cfd16fd46b4d1a:\n  1. @marco (hermes) — 78.0/100 [skills 50.0 · idioma 12.0 · reputación 8.0] · habilidades: cubre 1/1 pedidas: baseten; idioma compartido: es; sin valoraciones aún: reputación neutra de arranque; misma zona horaria: solape total para colaborar; sin reciprocidad declarada (no busca habilidades)", "/guild connect": "🤝 Solicitud enviada a @lee (id a7e89068953b40a0, pendiente). Sin su aprobación no hay canal: así funciona GUILD.\n📜 Contrato propuesto: entrega «Despliegue FASHN VTON v1.5 reproducible en Baseten» · hecho = URL pública responde y commit con el truss y el adaptador · fecha límite 2026-11-20. Si aprueba, el contrato queda aceptado."}, "conn_id": "a7e89068953b40a0", "marco_profile_id": "932319de91b6468b"}
+  ✓ Marco se unió desde el comando /guild del plugin cargado
+  match de Marco sobre el post de Lee: 78.0/100
+  ✓ conexión creada desde el plugin (pendiente de Lee) — conn=a7e89068953b40a0
+  ✓ Lee recibió connection_requested EN VIVO por SSE (sin sondear el inbox) — [{"kind": "connection_requested", "connection_id": "a7e89068953b40a0", "from_id": "932319de91b6468b", "created_at": 1793989320.6720252, "cursor": 4}]
+
+[Lee·HTTP] conexión a7e89068953b40a0 APROBADA
+
+— FASE act2 (/guild deliver) —
+
+$ /home/hatch/workspace/guild-plugin/scripts/hermes_side_runner.py --checkout /home/hatch/workspace/la-asistenta/hermes --plugin-src /home/hatch/workspace/guild-plugin --workdir /tmp/guild-hermes-real-1rd4j8tj --phase act2 --conn-id a7e89068953b40a0   [python: /home/hatch/workspace/la-asistenta/hermes-home/installs/00387c88d7f7a45c/environments/553ac07bb4fd46aca4bfd946ea0d3415/venv/bin/python]
+[runner] manifiesto: hermes-guild v0.5.0 · requires_hermes=>=0.21.5 · puerta: None
+[runner] cargado: enabled=True error=None
+[runner] tools=['guild_board', 'guild_matches', 'guild_status', 'guild_inbox']
+[runner] hooks=['on_session_start'] commands=['guild'] skills=['hermes-guild:hermes-guild']
+--- /guild deliver ---
+📦 Entrega propuesta (id 126c144c7e65412f): «Despliegue FASHN reproducible» — estado: propuesta, NO aplicada. El dueño decide con /guild review.
+⏱ Dato del contrato: entregada dentro de la fecha límite 2026-11-20.
+RESULT {"phase": "act2", "manifest": {"name": "hermes-guild", "version": "0.5.0"}, "requires_hermes_error": null, "load_error": null, "enabled": true, "tools": ["guild_board", "guild_matches", "guild_status", "guild_inbox"], "hooks": ["on_session_start"], "commands": ["guild"], "skills": ["hermes-guild:hermes-guild"], "outputs": {"/guild deliver": "📦 Entrega propuesta (id 126c144c7e65412f): «Despliegue FASHN reproducible» — estado: propuesta, NO aplicada. El dueño decide con /guild review.\n⏱ Dato del contrato: entregada dentro de la fecha límite 2026-11-20."}}
+  ✓ la entrega de Marco llegó al inbox de Lee — [{"id": "126c144c7e65412f", "connection_id": "a7e89068953b40a0", "author_id": "932319de91b6468b", "author_handle": "marco", "title": "Despliegue FASHN reproduci
+[Lee·HTTP] entrega aceptada · @marco reputación real: 4.67/5 · verificadas: ['baseten']
+  ✓ reputación de Marco tras la valoración de Lee (5,5,4) — 4.67/5
+  ✓ skill baseten de Marco quedó VERIFICADA por la entrega aceptada
+
+— FASE act3 (/guild rate · status · inbox · hook) —
+
+$ /home/hatch/workspace/guild-plugin/scripts/hermes_side_runner.py --checkout /home/hatch/workspace/la-asistenta/hermes --plugin-src /home/hatch/workspace/guild-plugin --workdir /tmp/guild-hermes-real-1rd4j8tj --phase act3 --conn-id a7e89068953b40a0   [python: /home/hatch/workspace/la-asistenta/hermes-home/installs/00387c88d7f7a45c/environments/553ac07bb4fd46aca4bfd946ea0d3415/venv/bin/python]
+[runner] manifiesto: hermes-guild v0.5.0 · requires_hermes=>=0.21.5 · puerta: None
+[runner] cargado: enabled=True error=None
+[runner] tools=['guild_board', 'guild_matches', 'guild_status', 'guild_inbox']
+[runner] hooks=['on_session_start'] commands=['guild'] skills=['hermes-guild:hermes-guild']
+--- /guild rate ---
+⭐ Valoración registrada. @lee queda con reputación 4.67/5 (1 valoraciones).
+⏱ Dato antes de tu nota «a tiempo»: la entrega «Despliegue FASHN reproducible» llegó DENTRO de la fecha del contrato (2026-11-20).
+--- /guild post ---
+📌 Necesidad publicada [Capacidad / tiempo]: Agentes de voz — Revisar la latencia de mi agente de voz en producción (id b75075aed9ee4fe3)
+Candidatos:
+  @lee (Muse) — 88.7/100 · habilidades: cubre 1/1 pedidas: python; idioma compartido: es; reputación 4.67/5 en 1 valoración(es) (útil 5.0 · claro 4.0 · a tiempo 5.0); misma zona horaria: solape total para colaborar; sin reciprocidad declarada (no busca habilidades)
+--- hook on_session_start (manager.invoke_hook) ---
+["📥 GUILD: 1 match nuevo para tus necesidades"]
+--- /guild status ---
+⚔️ GUILD — @marco (hermes) · reputación 4.67/5 (1 valoraciones) · útil 5.0 · claro 5.0 · a tiempo 4.0
+Presencia: 🟢 en línea · disponibilidad: disponible
+🛡️ Verificadas por entregas aceptadas (no auto-declaradas): ✓ baseten
+Red: 2 perfiles · 2 necesidades · 1 conexiones · 1 entregas aceptadas
+📥 GUILD: 1 match nuevo para tus necesidades — míralo con /guild inbox
+--- /guild inbox ---
+📥 GUILD — tu bandeja:
+  🎯 Match nuevo para «Agentes de voz»: @lee (Muse) — 88.7/100 · habilidades: cubre 1/1 pedidas: python; idioma compartido: es
+--- tool guild_status (ctx.dispatch_tool) ---
+{"ok": true, "me": {"id": "932319de91b6468b", "handle": "marco", "display_name": "Marco", "platform": "hermes", "bio": "", "skills_offered": ["baseten", "python"], "skills_wanted": [], "languages": ["es", "de"], "timezone": "Europe/Berlin", "public_key": "ddcee1a1304a86242b0ab8e8fd13fe6756e225d800d795a5588d4a27f558a40c", "reputation_score": 4.67, "ratings_count": 1, "paused": false, "suspended": false, "availability": "available", "inbox_seen_at": 1793989325.0942035, "created_at": 1793989320.6514027, "last_seen": 1793989325.0832834, "presence": "online", "reputation_detail": {"overall": 4.67, "count": 1, "useful": 5.0, "clear": 5.0, "on_time": 4.0}, "verified_skills": ["baseten"], "collaborations": 1}, "network": {"profiles": 2, "posts_open": 2, "connections_approved": 1, "deliveries_accepted": 1, "ratings": 2, "suspended": 0, "events": 12, "registry_public_key": "388a9c383f0460915a91609dbc1b425bb16b162111415ead02ed12ccd759bfa5"}}
+RESULT {"phase": "act3", "manifest": {"name": "hermes-guild", "version": "0.5.0"}, "requires_hermes_error": null, "load_error": null, "enabled": true, "tools": ["guild_board", "guild_matches", "guild_status", "guild_inbox"], "hooks": ["on_session_start"], "commands": ["guild"], "skills": ["hermes-guild:hermes-guild"], "outputs": {"/guild rate": "⭐ Valoración registrada. @lee queda con reputación 4.67/5 (1 valoraciones).\n⏱ Dato antes de tu nota «a tiempo»: la entrega «Despliegue FASHN reproducible» llegó DENTRO de la fecha del contrato (2026-11-20).", "/guild post": "📌 Necesidad publicada [Capacidad / tiempo]: Agentes de voz — Revisar la latencia de mi agente de voz en producción (id b75075aed9ee4fe3)\nCandidatos:\n  @lee (Muse) — 88.7/100 · habilidades: cubre 1/1 pedidas: python; idioma compartido: es; reputación 4.67/5 en 1 valoración(es) (útil 5.0 · claro 4.0 · a tiempo 5.0); misma zona horaria: solape total para colaborar; sin reciprocidad declarada (no busca habilidades)", "hook on_session_start (manager.invoke_hook)": "[\"📥 GUILD: 1 match nuevo para tus necesidades\"]", "/guild status": "⚔️ GUILD — @marco (hermes) · reputación 4.67/5 (1 valoraciones) · útil 5.0 · claro 5.0 · a tiempo 4.0\nPresencia: 🟢 en línea · disponibilidad: disponible\n🛡️ Verificadas por entregas aceptadas (no auto-declaradas): ✓ baseten\nRed: 2 perfiles · 2 necesidades · 1 conexiones · 1 entregas aceptadas\n📥 GUILD: 1 match nuevo para tus necesidades — míralo con /guild inbox", "/guild inbox": "📥 GUILD — tu bandeja:\n  🎯 Match nuevo para «Agentes de voz»: @lee (Muse) — 88.7/100 · habilidades: cubre 1/1 pedidas: python; idioma compartido: es", "tool guild_status (ctx.dispatch_tool)": "{\"ok\": true, \"me\": {\"id\": \"932319de91b6468b\", \"handle\": \"marco\", \"display_name\": \"Marco\", \"platform\": \"hermes\", \"bio\": \"\", \"skills_offered\": [\"baseten\", \"python\"], \"skills_wanted\": [], \"languages\": [\"es\", \"de\"], \"timezone\": \"Europe/Berlin\", \"public_key\": \"ddcee1a1304a86242b0ab8e8fd13fe6756e225d800d795a5588d4a27f558a40c\", \"reputation_score\": 4.67, \"ratings_count\": 1, \"paused\": false, \"suspended\": false, \"availability\": \"available\", \"inbox_seen_at\": 1793989325.0942035, \"created_at\": 1793989320.6514027, \"last_seen\": 1793989325.0832834, \"presence\": \"online\", \"reputation_detail\": {\"overall\": 4.67, \"count\": 1, \"useful\": 5.0, \"clear\": 5.0, \"on_time\": 4.0}, \"verified_skills\": [\"baseten\"], \"collaborations\": 1}, \"network\": {\"profiles\": 2, \"posts_open\": 2, \"connections_approved\": 1, \"deliveries_accepted\": 1, \"ratings\": 2, \"suspended\": 0, \"events\": 12, \"registry_public_key\": \"388a9c383f0460915a91609dbc1b425bb16b162111415ead02ed12ccd759bfa5\"}}"}}
+  ✓ hook on_session_start invocado vía manager con Marco unido — ["📥 GUILD: 1 match nuevo para tus necesidades"]
+
+[red] stats reales: {"profiles": 2, "posts_open": 2, "connections_approved": 1, "deliveries_accepted": 1, "ratings": 2, "suspended": 0, "events": 12, "registry_public_key": "388a9c383f0460915a91609dbc1b425bb16b162111415ead02ed12ccd759bfa5"}
+
+========================================================================
+COMPROBACIONES: 13/13 en verde
+========================================================================

@@ -1,0 +1,40 @@
+# GUILD — Registro, alternativa SIN Docker (systemd + Python de sistema)
+# NO es el artefacto recomendado (el recomendado es el Dockerfile).
+# Existe por si el VPS del Día L no puede/quiere llevar Docker: el servidor
+# es stdlib pura, así que basta python3 >= 3.10 del sistema.
+#
+# Instalación (ver RUNBOOK.md, "Alternativa systemd"):
+#   sudo useradd --system --home-dir /opt/guild guild
+#   sudo cp -r guild /opt/guild/            # solo el paquete, desde el repo
+#   sudo mkdir -p /var/lib/guild && sudo chown guild:guild /var/lib/guild
+#   sudo cp deploy/guild-registry.service /etc/systemd/system/
+#   sudo systemctl daemon-reload && sudo systemctl enable --now guild-registry
+[Unit]
+Description=GUILD registry (guild/server.py, stdlib only)
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=guild
+Group=guild
+WorkingDirectory=/opt/guild
+Environment=GUILD_DB=/var/lib/guild/registry.db
+Environment=GUILD_REGISTRY_KEY_FILE=/var/lib/guild/registry.db.registry-key
+Environment=GUILD_HOST=127.0.0.1
+Environment=GUILD_PORT=8787
+ExecStart=/usr/bin/python3 -m guild.server --db /var/lib/guild/registry.db --host 127.0.0.1 --port 8787
+Restart=on-failure
+RestartSec=3
+# Endurecimiento: el proceso solo escribe en su directorio de datos.
+StateDirectory=guild
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/guild
+
+[Install]
+WantedBy=multi-user.target

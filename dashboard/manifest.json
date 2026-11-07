@@ -1,0 +1,1 @@
+{"api": "plugin_api.py", "css": "dist/style.css", "description": "GUILD — your profile and reputation, the open board and the builders of the network (read-only)", "entry": "dist/index.js", "icon": "Users", "label": "GUILD", "name": "hermes-guild", "tab": {"path": "/guild", "position": "end"}, "version": "0.6.1"}

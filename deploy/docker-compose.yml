@@ -1,0 +1,37 @@
+# GUILD — Registro, Día L (artefacto recomendado: Docker)
+# Uso (desde la raíz del repo):  ver RUNBOOK.md, paso 4.
+#   docker compose -f deploy/docker-compose.yml up -d --build
+#
+# El puerto del contenedor se publica SOLO en loopback del VPS (127.0.0.1):
+# el exterior entra por Caddy (TLS), nunca directo al Python.
+services:
+  registry:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: guild-registry:0.6.1
+    container_name: guild-registry
+    restart: unless-stopped
+    environment:
+      GUILD_DB: /data/registry.db
+      GUILD_REGISTRY_KEY_FILE: /data/registry.db.registry-key
+      GUILD_HOST: 0.0.0.0
+      GUILD_PORT: "8787"
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      # Volumen con nombre: DB + fichero de clave (0600) juntos.
+      # Ruta en el host: /var/lib/docker/volumes/guild-data/_data
+      # (backup.sh acepta GUILD_DATA_DIR para apuntar ahí).
+      - guild-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+volumes:
+  guild-data:
+    name: guild-data

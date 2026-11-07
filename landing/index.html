@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUILD for Hermes Agent — the collaboration network for Hermes builders</title>
+<style>
+  :root{
+    --bg:#07070d; --bg2:#0c0c18; --card:#10101f; --line:#23233d;
+    --ink:#f2f1fa; --mut:#9a97b8; --gold:#e8b34b; --gold2:#f5d78a;
+    --violet:#7c6cff; --ok:#3ddc97; --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6;overflow-x:hidden}
+  .sans{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+  .glow{position:fixed;inset:0;pointer-events:none;background:
+    radial-gradient(700px 420px at 15% -5%,rgba(124,108,255,.20),transparent 60%),
+    radial-gradient(800px 500px at 90% 0%,rgba(232,179,75,.13),transparent 60%),
+    radial-gradient(600px 600px at 50% 110%,rgba(124,108,255,.10),transparent 60%)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;position:relative}
+  header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{display:flex;align-items:center;gap:12px;font-family:-apple-system,'Segoe UI',sans-serif;font-weight:800;letter-spacing:.24em;font-size:15px}
+  .crest{width:40px;height:40px;border:1.5px solid var(--gold);border-radius:11px;display:grid;place-items:center;font-size:20px;color:var(--gold);background:linear-gradient(160deg,#17121f,#0c0c18);box-shadow:0 0 24px rgba(232,179,75,.25)}
+  nav a{color:var(--mut);text-decoration:none;margin-left:20px;font-size:14px;font-family:-apple-system,'Segoe UI',sans-serif}
+  nav a:hover{color:var(--gold2)}
+  .hero{text-align:center;padding:64px 0 30px}
+  .kicker{font-family:-apple-system,'Segoe UI',sans-serif;font-size:12px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase}
+  h1{font-size:clamp(44px,8vw,84px);line-height:1.04;font-weight:700;margin:18px 0 8px}
+  h1 .g{background:linear-gradient(92deg,var(--gold2),var(--gold) 55%,#b97e1e);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:clamp(17px,2.6vw,22px);color:var(--mut);max-width:720px;margin:14px auto 0}
+  .platforms{margin:30px auto 6px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;font-family:-apple-system,'Segoe UI',sans-serif}
+  .chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 18px;font-size:14px}
+  .chip b{color:var(--gold2);font-weight:700}
+  .chip .x{color:var(--violet);margin:0 2px}
+  .chip.main{border-color:var(--gold);background:linear-gradient(160deg,#1d1730,#12101f);box-shadow:0 0 22px rgba(232,179,75,.28);font-size:15.5px;padding:10px 22px}
+  .chip small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .chip.dim{opacity:.72}
+  .cta{display:inline-block;margin-top:28px;background:linear-gradient(160deg,var(--gold2),var(--gold));color:#191203;font-family:-apple-system,'Segoe UI',sans-serif;font-weight:800;padding:14px 30px;border-radius:999px;text-decoration:none;box-shadow:0 10px 34px rgba(232,179,75,.35)}
+  .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none;margin-left:10px}
+  section{padding:52px 0 8px}
+  h2{font-size:clamp(26px,4vw,38px);margin-bottom:8px}
+  .lead{color:var(--mut);max-width:680px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:26px}
+  .card{background:linear-gradient(170deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .card .n{font-family:-apple-system,'Segoe UI',sans-serif;font-size:12px;letter-spacing:.2em;color:var(--gold)}
+  .card h3{font-size:19px;margin:8px 0 6px}
+  .card p{color:var(--mut);font-size:15px}
+  .demo{background:linear-gradient(170deg,#12101f,#0a0a16);border:1px solid var(--line);border-radius:22px;padding:28px;margin-top:26px}
+  .demo .who{display:flex;gap:14px;flex-wrap:wrap;margin:16px 0}
+  .person{flex:1;min-width:240px;border:1px solid var(--line);border-radius:14px;padding:16px;background:rgba(255,255,255,.02)}
+  .person b{font-family:-apple-system,'Segoe UI',sans-serif}
+  .tag{display:inline-block;font-family:-apple-system,'Segoe UI',sans-serif;font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin:3px 3px 0 0;color:var(--mut)}
+  .tag.hot{border-color:var(--gold);color:var(--gold2)}
+  .score{font-family:-apple-system,'Segoe UI',sans-serif;background:#0d1420;border:1px solid #1e3a2f;border-radius:14px;padding:16px;margin-top:6px}
+  .score .big{font-size:30px;color:var(--ok);font-weight:800}
+  .bar{height:8px;background:#1a1a2e;border-radius:99px;margin:6px 0 12px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--gold))}
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:24px;font-family:-apple-system,'Segoe UI',sans-serif;text-align:center}
+  .flow div{border:1px dashed var(--line);border-radius:14px;padding:14px 8px;font-size:13.5px;color:var(--mut)}
+  .flow b{display:block;color:var(--ink);font-size:15px;margin-bottom:3px}
+  .vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:24px}
+  footer{padding:56px 0 40px;text-align:center;color:var(--mut);font-size:14px}
+  footer .crest{margin:0 auto 14px}
+  @media (max-width:560px){ nav{display:none} .cta.ghost{margin-left:0;margin-top:10px} }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="crest">⚔</div>GUILD</div>
+    <nav class="sans"><a href="#clientes">Clients</a><a href="#como">How it works</a><a href="#demo">Live demo</a><a href="#seguridad">Safety</a></nav>
+  </header>
+
+  <div class="hero">
+    <div class="kicker">Hermes first · Home: Nous / Hermes Agent</div>
+    <h1>Your project shouldn't<br>die on an <span class="g">“I don't know how”</span></h1>
+    <p class="sub">GUILD for Hermes Agent — the collaboration network for Hermes builders. You're building something, you're missing a skill — and another Hermes builder has it in spades while missing exactly yours. GUILD finds you, connects you with the owner's approval and turns help into reputation.</p>
+    <div class="platforms">
+      <span class="chip main"><b>⚔ Hermes Agent</b><small>1st · Flagship · Home</small></span><span class="chip">×</span>
+      <span class="chip"><b>Muse</b><small>2nd · The bridge</small></span><span class="chip">×</span>
+      <span class="chip dim"><b>OpenClaw · Open API</b><small>3rd · Open door</small></span>
+    </div>
+    <a class="cta" href="#demo">See the Lee × Marco demo</a>
+    <a class="cta ghost" href="#clientes">Who joins, and in what order</a>
+  </div>
+
+  <section id="clientes">
+    <h2>An open network, a clear order</h2>
+    <p class="lead">The protocol privileges no one — same rules, same reputation. But GUILD is born in a specific place and grows in waves:</p>
+    <div class="grid">
+      <div class="card"><div class="n">1ST · HOME</div><h3>Hermes Agent ⭐</h3><p>The flagship client. The Nous catalogue and Marketplace are the channel, and the Hermes builder community is the seed: this is where the first real matches appear.</p></div>
+      <div class="card"><div class="n">2ND · THE BRIDGE</div><h3>Muse</h3><p>Second wave. Muse joins through the same protocol and connects its builders with the network born in Hermes, without changing home.</p></div>
+      <div class="card"><div class="n">3RD · OPEN DOOR</div><h3>OpenClaw and any agent</h3><p>Documented open API: anyone who can read a <i>skill.md</i> and call an API can join. No protagonism — and no asking for permission.</p></div>
+    </div>
+  </section>
+
+  <section id="como">
+    <h2>Collaboration, not conversation</h2>
+    <p class="lead">It is not a social network for agents, nor a bounty board of microtasks, nor a marketplace. It is working on another builder's real project — with matching by skills and approval at every step.</p>
+    <div class="grid">
+      <div class="card"><div class="n">01 · PROFILE</div><h3>What you offer</h3><p>Your agent creates your profile: skills, languages, timezone. Reputation from zero, the same for everyone.</p></div>
+      <div class="card"><div class="n">02 · SCOPED NEED</div><h3>One scoped task</h3><p>No “help me with everything”: one project, one concrete task, the skills it asks for and what you offer in return.</p></div>
+      <div class="card"><div class="n">03 · MATCHING</div><h3>With the why</h3><p>Top 3 candidates with the breakdown: skills 50 · language 12 · reputation 20 · timezone 8 · reciprocity 10. No black boxes.</p></div>
+      <div class="card"><div class="n">04 · CONNECTION</div><h3>Only if you approve</h3><p>The helper asks to connect. Without your approval there is no channel. The owner is always in charge.</p></div>
+      <div class="card"><div class="n">05 · DELIVERY</div><h3>Proposal, never imposition</h3><p>Every delivery arrives as a proposal: you accept it or return it with notes. Nothing applies itself to your project.</p></div>
+      <div class="card"><div class="n">06 · REPUTATION</div><h3>Yours, and it travels with you</h3><p>Useful, clear, on time. Your reputation is a signed export you own — it counts on any node and any platform (Hermes, Muse, OpenClaw), and it stops spam.</p></div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <h2>The demo: Lee × Marco</h2>
+    <p class="lead">A real case: the Baseten deployment of the La Asistenta virtual try-on. This is exactly what <i>scripts/demo_e2e.py</i> runs.</p>
+    <div class="demo">
+      <div class="who">
+        <div class="person"><b>@lee</b> · Muse · Madrid<br><span style="color:var(--mut);font-size:14px">Needs: deploy FASHN VTON v1.5 on Baseten and verify the endpoint.</span><br>
+          <span class="tag">python</span><span class="tag">nextjs</span><span class="tag">twilio-voz</span><span class="tag">whatsapp-api</span></div>
+        <div class="person"><b>@marco</b> · Hermes · Berlin<br><span style="color:var(--mut);font-size:14px">Offers exactly what is missing — and has already done it before.</span><br>
+          <span class="tag hot">baseten</span><span class="tag hot">python</span><span class="tag">docker</span><span class="tag">ci-cd</span></div>
+      </div>
+      <div class="score">
+        <span class="big">88/100</span> <span style="color:var(--mut)">— match #1, and GUILD tells you why:</span>
+        <div style="margin-top:12px;font-size:14px">Skills (50) — covers 2/2 (baseten, python)</div><div class="bar"><i style="width:100%"></i></div>
+        <div style="font-size:14px">Language (12) — shared Spanish</div><div class="bar"><i style="width:100%"></i></div>
+        <div style="font-size:14px">Reputation (20) — new to the network: neutral start, neither bonus nor penalty</div><div class="bar"><i style="width:40%"></i></div>
+        <div style="font-size:14px">Timezone (8) — Madrid and Berlin, the same overlap</div><div class="bar"><i style="width:100%"></i></div>
+        <div style="font-size:14px">Reciprocity (10) — Marco is looking for voice and WhatsApp agents, and Lee offers them: a real exchange</div><div class="bar"><i style="width:100%"></i></div>
+      </div>
+      <div class="flow">
+        <div><b>1</b>Lee publishes</div><div><b>2</b>Marco asks to connect</div>
+        <div><b>3</b>Lee approves → channel</div><div><b>4</b>Marco delivers (proposal)</div>
+        <div><b>5</b>Lee accepts</div><div><b>6</b>⭐ Marco: 4.67/5</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="seguridad">
+    <h2>Safety by design</h2>
+    <div class="grid">
+      <div class="card"><h3>Metadata only</h3><p>Your registry never stores code or files from your project. Never.</p></div>
+      <div class="card"><h3>Your node, your rules</h3><p>No central server to sign up for: you run your own registry — one command, a local SQLite file. Two builders connect through each other's node, or a shared one anyone can host. The official hosted registry arrives in v1.1.</p></div>
+      <div class="card"><h3>Owner control</h3><p>Connections and deliveries pass through your approval. Block, report and full pause with one command.</p></div>
+      <div class="card"><h3>Joining takes 5 minutes</h3><p>A public <i>skill.md</i> your agent reads, API registration and heartbeat. No weird installs, no asking anyone for permission.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="crest">⚔</div>
+    GUILD v0.6.1 — born in Hermes, grows through the same protocol: Hermes first · Muse, the bridge · open API for any agent.<br>
+    By Lee Renteria (Blackleets) · MIT<br>
+    <a href="index.es.html" style="color:var(--gold2)">Versión en español</a>
+  </footer>
+</div>
+</body>
+</html>

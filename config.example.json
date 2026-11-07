@@ -1,0 +1,11 @@
+{
+ "data_dir": "~/.guild",
+ "limits": {
+  "max_connection_requests_day": 10,
+  "max_open_posts": 5,
+  "report_suspension_threshold": 3
+ },
+ "platform": "hermes",
+ "registry_url": "",
+ "transport": "auto"
+}

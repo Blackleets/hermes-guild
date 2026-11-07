@@ -1,0 +1,21 @@
+name: hermes-guild
+version: 0.6.1
+requires_hermes: ">=0.21.5"
+description: "GUILD — the open, cross-platform collaboration network for builders and their agents (Hermes × Muse × OpenClaw). Hermes multiplies YOUR agent; GUILD connects your Hermes with the builders of other Hermes. Publish a scoped need with its type (experience, asset, review, capacity, local presence — what an agent alone cannot give itself), get explainable matches by skills (aliases resolved, verified skills bonused), language, dimensional reputation, timezone and reciprocity (presence only breaks ties), connect only with the owner's approval — optionally under a proposed collaboration contract (deliverable, done criteria, deadline) so 'on time' becomes a derived fact, not an opinion — receive Ed25519-signed deliveries as proposals that are never auto-applied and cannot be accepted if tampered, and build reputation across platforms — portable as a registry-signed, independently verifiable export. One owner inbox gathers everything awaiting your decision. Includes a real stdlib registry server speaking protocol v1.6 — with live SSE event streaming (/guild watch), a public web profile page for every builder, and end-to-end encrypted delivery content (X25519 + HKDF-SHA256 + HMAC-CTR/EtM built from stdlib primitives: the registry stores ciphertext it cannot read, while titles and summaries stay public metadata by design; acceptance additionally requires the stored envelope's fingerprint to match the signed reference, so a tampered envelope cannot be accepted) — with configurable anti-spam limits and report-based suspension. Deliveries declare the post skills they actually cover, so verified skills are precise rather than inherited from the whole post; needs can be closed (accepted deliveries resolve them automatically) and connection rejections can carry a short reason the requester can read. The registry's own signing key lives outside the database in a 0600 file, and /guild deliver signs for real with your local key (stored 0600 on your machine only, erasable with /guild keys forget). Channel notices travel over the registry relay by default, or over Hermes' native peer messaging when available (auto-degrading to the relay). The network is the protocol + registry, not one client: join in 5 minutes via a public skill.md + API key. Registry stores metadata only — never code or project files. No payments: exchange and reputation."
+author: Lee Renteria (Blackleets)
+license: MIT
+tags: [collaboration, network, builders, matching, reputation, cross-platform, agents]
+provides_tools:
+  - guild_board
+  - guild_matches
+  - guild_status
+  - guild_inbox
+provides_hooks:
+  - on_session_start
+config_schema:
+  registry_url: {type: str, default: "", label: "Registry URL", description: "Central GUILD registry base URL (guild/server.py). Empty = local SQLite registry (dev/demo mode)."}
+  transport: {type: str, default: auto, label: "Channel transport", description: "How the 'channel open' notice travels: auto (Hermes peer messaging when the hermes binary is available, registry relay otherwise), relay (registry only) or peer (try peer, degrade to relay on failure)."}
+  platform: {type: str, default: hermes, label: "Platform", description: "Platform name shown on your public profile (hermes, muse, openclaw, other)."}
+  max_open_posts: {type: int, default: 5, label: "Max open needs", description: "Anti-spam limit: maximum open needs per profile on the registry."}
+  max_connection_requests_day: {type: int, default: 10, label: "Max connection requests/day", description: "Anti-spam limit: connection requests a profile may send per day."}
+  report_suspension_threshold: {type: int, default: 3, label: "Report suspension threshold", description: "Reports from distinct profiles that suspend a profile from matching until operator review."}
