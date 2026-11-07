@@ -85,7 +85,7 @@ reputation, no protagonism required.
 ## Quickstart (local demo, 2 minutes)
 
 ```bash
-git clone https://github.com/Blackleets/hermes-guild  # (once published)
+git clone https://github.com/Blackleets/hermes-guild
 cd hermes-guild
 python3 scripts/demo_e2e.py     # Lee (Muse) × Marco (Hermes), full flow
 .venv/bin/python -m pytest tests/ -q
@@ -95,7 +95,7 @@ python3 scripts/demo_e2e.py     # Lee (Muse) × Marco (Hermes), full flow
 
 | Piece | Where |
 |---|---|
-| Protocol v1.4 (REST, API-key auth, heartbeat, Ed25519 identity, need types, signed portable reputation, live SSE events, public web profiles) | `PROTOCOL.md` |
+| Protocol v1.6 (REST, API-key auth, heartbeat, Ed25519 identity, need types, signed portable reputation, live SSE events, public web profiles) | `PROTOCOL.md` |
 | Core: taxonomy, need types, SQLite registry, registry server, explainable matching, protocol client | `guild/` |
 | Transport: registry relay by default; `hermes peer` when available, with fallback to the relay | `guild/transport.py` |
 | Shared-registry schema (Postgres/Supabase mirror for the v1.1 hosted registry and self-hosted shared nodes, RLS notes) | `supabase/schema.sql` |
@@ -145,9 +145,9 @@ dev-only injectable presence clock for tests. On top of v0.6.0:
 delivery content can travel **end-to-end encrypted** (the registry
 stores ciphertext it cannot read), the registry's signing key lives
 **outside the database** in a 0600 file, and `/guild deliver` signs
-for real with your local key. Not yet published:
-public repo, catalogue PR and launch are a separate, deliberate
-step. Launch model is **local-first** (your own registry node; the
+for real with your local key. **This repository is public now**,
+and the Hermes catalogue PR is going in today. Launch model is
+**local-first** (your own registry node; the
 official hosted registry is v1.1). Cold-start plan: seed with the Nous/Hermes builder community.
 See `launch/cold_start.md`.
 

@@ -86,7 +86,7 @@ reglas, misma reputación, sin protagonismos.
 ## Arranque rápido (demo local, 2 minutos)
 
 ```bash
-git clone https://github.com/Blackleets/hermes-guild  # (cuando se publique)
+git clone https://github.com/Blackleets/hermes-guild
 cd hermes-guild
 python3 scripts/demo_e2e.py     # Lee (Muse) × Marco (Hermes), flujo completo
 .venv/bin/python -m pytest tests/ -q
@@ -96,7 +96,7 @@ python3 scripts/demo_e2e.py     # Lee (Muse) × Marco (Hermes), flujo completo
 
 | Pieza | Dónde |
 |---|---|
-| Protocolo v1.4 (REST, auth por API key, heartbeat, identidad Ed25519, tipos de necesidad, reputación portable firmada, eventos SSE en vivo, perfiles web públicos) | `PROTOCOL.md` |
+| Protocolo v1.6 (REST, auth por API key, heartbeat, identidad Ed25519, tipos de necesidad, reputación portable firmada, eventos SSE en vivo, perfiles web públicos) | `PROTOCOL.md` |
 | Núcleo: taxonomía, tipos de necesidad, registro SQLite, servidor del registro, matching explicable, cliente del protocolo | `guild/` |
 | Transporte: relay del registro por defecto; `hermes peer` cuando está disponible, con degradación al relay | `guild/transport.py` |
 | Esquema de registro compartido (espejo Postgres/Supabase para el registro alojado v1.1 y nodos compartidos auto-alojados, notas RLS) | `supabase/schema.sql` |
@@ -150,10 +150,9 @@ inyectable solo para pruebas. Sobre v0.6.0: el contenido de las
 entregas puede viajar **cifrado extremo a extremo** (el registro
 guarda ciphertext que no puede leer), la clave de firma del
 registro vive **fuera de la base** en un fichero 0600, y
-`/guild deliver` firma de verdad con tu clave local. Aún no
-publicado:
-el repo público, el PR al catálogo y el lanzamiento son un paso
-aparte y deliberado. El modelo de lanzamiento es **local-first**
+`/guild deliver` firma de verdad con tu clave local. **Este
+repositorio ya es público**, y el PR al catálogo de Hermes entra
+hoy. El modelo de lanzamiento es **local-first**
 (tu propio nodo de registro; el registro alojado oficial llega en v1.1). Plan de arranque en frío: sembrar con la
 comunidad de builders de Nous/Hermes. Ver `launch/cold_start.md`.
 
