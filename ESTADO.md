@@ -413,47 +413,151 @@ paso a paso (verdad operacional: HECHO solo lo que tiene URL verificada):
    Árbol de publicación: 67 ficheros, 717 KB, todo UTF-8, sin bases de
    datos, sin `keys.json`, sin checkouts anidados, sin la carpeta del
    vídeo. Suite completa: **118 passed** (puerta del lanzamiento).
-2. **Repo público `Blackleets/hermes-guild`: BLOQUEADO.** La creación vía
-   la GitHub App de Muse devolvió `403 Resource not accessible by
-   integration` (POST /user/repos): la App no puede crear repos fuera de
-   su instalación. **Toque exacto que falta de Lee:** crear el repo
-   vacío y público `hermes-guild` en su cuenta (github.com/new, SIN
-   README/.gitignore/licencia) y añadirlo a la instalación de la GitHub
-   App «Meta Muse AI» (GitHub → Settings → Applications → Meta Muse AI
-   → Repository access → añadir `hermes-guild`; en el alta de
-   hermes-spendguard esto pidió su código de seguridad/modo sudo). En
-   cuanto exista, el push es el snapshot estándar (manifiesto de 67
-   ficheros) y la release es la **v0.6.1**. El conector no expone
-   herramienta de releases/tags ni de topics: la release v0.6.1 (notas =
-   CHANGELOG) y los topics quedan como click web de Lee o de un agente
-   con navegador tras el push.
-3. **PR al catálogo: PAQUETE LISTO, sin abrir** (depende del paso 2:
-   el pin exige el SHA del commit de la release). Paquete completo en
-   `~/workspace/guild-plugin-catalog-pr/`: `hermes-guild.yaml` (formato
-   vivo del catálogo, capabilities reales del plugin: 4 tools +
-   `on_session_start`; el SHA va con marcador
-   `PENDING_V061_RELEASE_COMMIT_SHA` para rellenar con el SHA del push)
-   y `PR_DESCRIPTION.md` (título, cuerpo y disclosure de la regla 13).
-   Al abrirlo será, como Gazette/SpendGuard, un PR de 1 fichero a
-   `NousResearch/hermes-agent` vía fork de Blackleets, rama
-   `catalog/hermes-guild`.
+2. **Repo público `Blackleets/hermes-guild`: HECHO y VERIFICADO.**
+   Lee creó el repo vacío y público y lo añadió a la instalación de la
+   App «Meta Muse AI» («Selected 5 repositories»). Push ejecutado el
+   07/11/2026 por snapshot (manifiesto de 67 ficheros, 723.510 bytes,
+   todo UTF-8) a la rama `main`: commit de la release
+   **`bb5e3fd0bb6328b3652d648ba7162500255218fb`** (sobre el commit
+   inicial de inicialización del proveedor, `fd93ca8c…`). Verificado:
+   https://github.com/Blackleets/hermes-guild carga público, rama por
+   defecto `main`, README renderizado, raíz con los 67 ficheros.
+   **Release `v0.6.1` y topics: PENDIENTES de web** — el conector no
+   expone herramientas de releases ni de topics (solo lectura de
+   releases); quedan como clicks en la web del repo (release con notas
+   del CHANGELOG; al crearla, el pin del catálogo sigue siendo el
+   commit `bb5e3fd0…`).
+3. **PR al catálogo: RAMA LISTA, apertura BLOQUEADA vía conector.**
+   Paquete completado con el SHA real (`bb5e3fd0…` sustituye al
+   marcador `PENDING_V061_RELEASE_COMMIT_SHA` en `hermes-guild.yaml`).
+   Rama creada en el fork `Blackleets/hermes-agent-upstream`:
+   `add-hermes-guild-plugin` (head
+   `aecda1e962582dd05ce8a7492e22d29741ec8df4`), con diff verificado de
+   exactamente 1 fichero: `plugin-catalog/hermes-guild.yaml`. Pero
+   `create_pull_request` contra `NousResearch/hermes-agent` devolvió
+   `403 Resource not accessible by integration`: el token de la App no
+   puede abrir PRs en el repo upstream (la App no está instalada allí);
+   Gazette/SpendGuard se abrieron por otra vía. **Paso restante (web,
+   1 click):** abrir el PR desde la URL de compare
+   https://github.com/NousResearch/hermes-agent/compare/main...Blackleets:hermes-agent-upstream:add-hermes-guild-plugin?expand=1
+   con el título y el cuerpo de
+   `~/workspace/guild-plugin-catalog-pr/PR_DESCRIPTION.md`.
 4. **Post de X: FINAL, sin publicar** (lo publica Lee en persona).
    `launch/post_x.md` con cifras de hoy, modelo local-first y el enlace
-   `https://github.com/Blackleets/hermes-guild` + comando de instalación;
-   su nota interna avisa de que la URL aún no carga hasta que exista el
-   repo — no publicar antes de verificarlo.
-5. **Landing en vivo: PENDIENTE** (depende del paso 2). Plan: GitHub
-   Pages del propio repo con `landing/` como fuente; el conector no
-   expone API de Pages, así que la activación es un click en Settings →
-   Pages del repo tras el push. El README no enlaza aún ninguna URL de
-   Pages (nada de enlazar a un 404).
+   `https://github.com/Blackleets/hermes-guild` + comando de instalación.
+   Su precondición ya se cumple: la URL del repo carga verificada
+   (07/11/2026).
+5. **Landing en vivo: PREPARADA vía Actions, pendiente de 2 pasos
+   web** (el repo ya existe). Pages desde rama solo ofrece `/` o
+   `/docs` y la landing vive en `landing/`, así que se despliega con
+   GitHub Actions: workflow `Deploy landing to Pages`
+   (`.github/workflows/pages.yml`) creado y verificado EN LOCAL el
+   07/11/2026 — push a `main` con `paths: landing/**` + el propio
+   workflow, `workflow_dispatch`, permisos `pages: write` +
+   `id-token: write` + `contents: read`, job único con
+   checkout@v4 → upload-pages-artifact@v3 (`path: landing`) →
+   deploy-pages@v4. **El push del workflow por el conector quedó
+   BLOQUEADO**: `403 Resource not accessible by integration` al
+   crear el árbol — la GitHub App de Muse no tiene el permiso
+   «Workflows» que GitHub exige para crear ficheros bajo
+   `.github/workflows/` (los pushes anteriores, sin ficheros de
+   workflow, sí pasaron). Verificado tras el fallo: `main` sigue en
+   el pin `d727689…` y el registro de sync no avanzó. Pasos web
+   restantes: (a) subir `.github/workflows/pages.yml` (contenido en
+   local, listo para pegar) vía la web del repo o conceder el
+   permiso Workflows a la App; (b) Settings → Pages → fuente
+   «GitHub Actions», y verificar la URL publicada
+   (https://blackleets.github.io/hermes-guild/). El README no
+   enlaza aún ninguna URL de Pages (nada de enlazar a un 404).
 6. **Vídeo de lanzamiento:** la v5 quedó DESCARTADA por Lee tras verla
    («no me gusta»); se está rehaciendo con Flow. El post no depende de
    ello para existir, pero el Día L público completo sí quiere su vídeo:
    decisión de Lee si el post sale con la v4 (77,5 s, lista y verificada)
    o espera a la nueva de Flow.
 
-**Resumen:** lanzamiento ejecutado hasta el muro de permisos de GitHub.
-Todo lo que no dependía de ese muro está hecho o listo; el desbloqueo es
-un único gesto de Lee (crear el repo vacío + añadirlo a la App), tras el
-cual push, release, PR y Pages son mecánicos.
+**Resumen (actualizado tras el push):** repo público EN VIVO y
+verificado con el commit de la release v0.6.1
+(`bb5e3fd0bb6328b3652d648ba7162500255218fb`). Lo que queda es solo vía
+web, porque el conector no lo expone o no tiene permiso upstream:
+(1) abrir el PR al catálogo desde la URL de compare (la rama del fork
+ya lleva el fichero exacto con el pin), (2) crear la release `v0.6.1`
+y los topics en la web del repo, (3) activar GitHub Pages
+(`landing/`). El post de X lo publica Lee cuando quiera: su URL ya
+carga.
+
+**Corrección de copy post-publicación (07/11/2026, tarde):** el
+README publicado arrastraba tres restos previos al lanzamiento,
+corregidos en `README.md` y `README.es.md`: (a) quitado el
+comentario «# (once published)» / «# (cuando se publique)» del
+`git clone`; (b) la frase de Status «Not yet published: public
+repo, catalogue PR and launch…» / «Aún no publicado: el repo
+público, el PR al catálogo y el lanzamiento…» reescrita a la
+verdad del momento (repo público ya; PR al catálogo en curso hoy;
+modelo local-first, sin prometer red central); (c) «Protocol
+v1.4» / «Protocolo v1.4» en «What's in the box» → **v1.6**.
+Barrido extra sin más hits. Re-push por snapshot (solo los dos
+README) → **nueva cabeza de `main`:
+`d7276891e514076a6ee68abe352bc7c3027e0fc6`**, verificada contra la
+API (README remoto ya sin «Not yet published»). **Re-pin del
+catálogo HECHO:** `hermes-guild.yaml` actualizado a ese SHA tanto
+en el paquete local (`~/workspace/guild-plugin-catalog-pr/`) como
+en la rama `add-hermes-guild-plugin` del fork (commit
+`1e8a24f285b20d061a98c3dd2ed594794ef297f0`); la vista compare de
+la rama contra `main` sigue mostrando exactamente **1 fichero**
+cambiado (3 commits, todos sobre la entrada del catálogo). Nota:
+esta anotación de ESTADO.md es local; el ESTADO.md remoto queda
+en el commit `d727689…` hasta la próxima sync por snapshot.
+
+**Paquete «REPO ESTRELLA» (07/11/2026, después del lanzamiento):**
+el repo queda a nivel escaparate. Subido por snapshot (9 ficheros)
+→ **cabeza de `main`: `91549fbfc3f5a53c8ffd2c3381814cdff37ffc80`**
+(commit posterior a la release: el tag `v0.6.1` y el pin del
+catálogo `d727689…` NO se tocan):
+
+- **Imágenes SVG nativas** en `docs/img/` (el conector solo publica
+  texto UTF-8; todo vectorial, identidad de la landing: fondo
+  índigo `#07070d`, tarjetas, oro `#e8b34b`, violeta `#7c6cff`):
+  `hero.svg` (wordmark + posicionamiento + chips), `how-it-works.svg`
+  (5 pasos + banda de reputación), `match-card.svg` (el match REAL
+  Lee×Marco **88/100** con sus 5 barras canónicas),
+  `security.svg` (flujo E2E + etiqueta honesta «stdlib, not
+  externally audited»), `reputation.svg` (Marco **4.67/5**: útil 5 ·
+  claro 5 · a tiempo 4, export firmado y portable) y
+  `architecture.svg` (clientes / protocolo v1.6 / nodos
+  local-first). QA visual hecha renderizándolas a PNG una a una
+  (cairosvg): la primera pasada cazó glifos emoji que no
+  renderizaban (⚔ ★ 🔒 🔑 ⭐ → sustituidos por iconos vectoriales
+  dibujados), una nota cortada en match-card y el título de la
+  tarjeta 5 desbordado; todo corregido y re-verificado.
+- **README escaparate** (`README.md` + espejo `README.es.md` con
+  las mismas imágenes): hero arriba, 6 badges shields.io SOLO con
+  hechos verificados (release v0.6.1 · protocol v1.6 · tests 118
+  passing · verified on Hermes v0.23.0 · local-first · MIT),
+  quick start <1 min (instalar plugin + `python3 -m guild.server`),
+  secciones How it works / Architecture / Security / Reputation con
+  las imágenes, sección **Evidence** (swarm, release oficial, Hermes
+  real, TESTING), mapa de documentación completo, roadmap corto
+  (v1.1 hosted registry · ola Muse · ola API abierta) y el estado
+  actualizado enlazando la release y el **PR #150708**.
+- **`TESTING.md`** nuevo: cómo correr la suite (**118 passed en
+  12.80 s**, corrida real del 07/11/2026, Python 3.12), qué cubre
+  cada fichero de test (66+17+21+6+4+4) y las demos con sus comandos
+  e informes.
+- **Verificación del push:** README remoto servido con las imágenes
+  (hero.svg y match-card.svg comprobados desde
+  raw.githubusercontent) y pase de enlaces internos del README sin
+  ningún enlace roto.
+
+**Pendiente SOLO vía web** (el conector no puede: 403 en
+`.github/workflows/` y la imagen social es binaria):
+
+- `.github/workflows/ci.yml` — LISTA EN LOCAL (pytest en push/PR,
+  Python 3.12, venv como en local: solo pytest, el resto es
+  stdlib). Subirla por la web del repo (Add file → Create new file)
+  o conceder el permiso «Workflows» a la GitHub App.
+  (La de Pages, `pages.yml`, sí entró por web: commit
+  `2eccf735…`.)
+- **Imagen social**: `~/workspace/guild-video/og-image.png`
+  (1280×640, PIL, misma identidad: wordmark + posicionamiento +
+  chips) generada y verificada EN LOCAL — subirla en
+  Settings → General → Social preview.
