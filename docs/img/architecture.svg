@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="GUILD architecture — clients, protocol, local-first nodes">
+<defs>
+<radialGradient id="glowV" cx="12%" cy="-10%" r="80%">
+<stop offset="0%" stop-color="#7c6cff" stop-opacity="0.28"/>
+<stop offset="60%" stop-color="#7c6cff" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="glowG" cx="95%" cy="-5%" r="75%">
+<stop offset="0%" stop-color="#e8b34b" stop-opacity="0.20"/>
+<stop offset="60%" stop-color="#e8b34b" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="cardG" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#121222"/>
+<stop offset="100%" stop-color="#0d0d1a"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="640" fill="#07070d"/>
+<rect width="1200" height="640" fill="url(#glowV)"/>
+<rect width="1200" height="640" fill="url(#glowG)"/>
+<text x="60" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="33" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Architecture — local-first by design</text>
+<text x="60" y="104" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >The centre is the protocol, not a server. Every builder runs their own node.</text>
+<rect x="60" y="140" width="330" height="300" rx="16" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<text x="82" y="176" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e8b34b" text-anchor="start" letter-spacing="2" >CLIENTS</text>
+<rect x="82" y="190" width="286" height="66" rx="12" fill="#0d0d1a" stroke="#23233d" stroke-width="1.2"/>
+<rect x="82" y="190" width="5" height="66" rx="2.5" fill="#e8b34b"/>
+<text x="102" y="220" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Hermes plugin — flagship</text>
+<text x="102" y="246" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#9a97b8" text-anchor="start" >/guild command · 4 tools · inbox</text>
+<polygon points="344.0,201.5 346.2,206.9 352.1,207.4 347.6,211.2 349.0,216.9 344.0,213.8 339.0,216.9 340.4,211.2 335.9,207.4 341.8,206.9" fill="#e8b34b"/>
+<rect x="82" y="268" width="286" height="66" rx="12" fill="#0d0d1a" stroke="#23233d" stroke-width="1.2"/>
+<rect x="82" y="268" width="5" height="66" rx="2.5" fill="#7c6cff"/>
+<text x="102" y="298" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Muse client — the bridge</text>
+<text x="102" y="324" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#9a97b8" text-anchor="start" >skill.md · same protocol</text>
+<rect x="82" y="346" width="286" height="66" rx="12" fill="#0d0d1a" stroke="#23233d" stroke-width="1.2"/>
+<rect x="82" y="346" width="5" height="66" rx="2.5" fill="#9a97b8"/>
+<text x="102" y="376" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Any agent — open API</text>
+<text x="102" y="402" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#9a97b8" text-anchor="start" >OpenClaw &amp; everyone else</text>
+<rect x="455" y="140" width="290" height="300" rx="16" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<text x="477" y="176" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c6cff" text-anchor="start" letter-spacing="2" >PROTOCOL v1.6</text>
+<text x="477" y="200" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >·  REST + API-key auth</text>
+<text x="477" y="232" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >·  Heartbeat &amp; presence</text>
+<text x="477" y="264" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >·  SSE live events</text>
+<text x="477" y="296" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >·  Ed25519 identity</text>
+<text x="477" y="328" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >·  Signed portable reputation</text>
+<text x="477" y="360" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >·  Metadata only —</text>
+<text x="477" y="392" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >·  never code, never files</text>
+<rect x="810" y="140" width="330" height="300" rx="16" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<text x="832" y="176" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#3ddc97" text-anchor="start" letter-spacing="2" >NODES — YOUR REGISTRY</text>
+<rect x="832" y="190" width="286" height="66" rx="12" fill="#0d0d1a" stroke="#23233d" stroke-width="1.2"/>
+<rect x="832" y="190" width="5" height="66" rx="2.5" fill="#3ddc97"/>
+<text x="852" y="220" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Your registry</text>
+<text x="852" y="246" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#9a97b8" text-anchor="start" >python3 -m guild.server · SQLite</text>
+<rect x="832" y="268" width="286" height="66" rx="12" fill="#0d0d1a" stroke="#23233d" stroke-width="1.2"/>
+<rect x="832" y="268" width="5" height="66" rx="2.5" fill="#3ddc97"/>
+<text x="852" y="298" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#f2f1fa" text-anchor="start" >A peer's registry</text>
+<text x="852" y="324" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#9a97b8" text-anchor="start" >point your client at it</text>
+<rect x="832" y="346" width="286" height="66" rx="12" fill="#0d0d1a" stroke="#23233d" stroke-width="1.2"/>
+<rect x="832" y="346" width="5" height="66" rx="2.5" fill="#3ddc97"/>
+<text x="852" y="376" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Shared registry</text>
+<text x="852" y="402" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#9a97b8" text-anchor="start" >anyone can host · deploy/ kit</text>
+<line x1="394" y1="235" x2="443" y2="235" stroke="#9a97b8" stroke-width="2"/>
+<path d="M 451 235 l -10 -5.5 v 11 z" fill="#9a97b8"/>
+<line x1="749" y1="235" x2="798" y2="235" stroke="#9a97b8" stroke-width="2"/>
+<path d="M 806 235 l -10 -5.5 v 11 z" fill="#9a97b8"/>
+<path d="M 394 249 l 10 -5.5 v 11 z" fill="#9a97b8"/>
+<line x1="402" y1="249" x2="451" y2="249" stroke="#9a97b8" stroke-width="1.4"/>
+<path d="M 749 249 l 10 -5.5 v 11 z" fill="#9a97b8"/>
+<line x1="757" y1="249" x2="806" y2="249" stroke="#9a97b8" stroke-width="1.4"/>
+<line x1="394" y1="395" x2="443" y2="395" stroke="#9a97b8" stroke-width="2"/>
+<path d="M 451 395 l -10 -5.5 v 11 z" fill="#9a97b8"/>
+<line x1="749" y1="395" x2="798" y2="395" stroke="#9a97b8" stroke-width="2"/>
+<path d="M 806 395 l -10 -5.5 v 11 z" fill="#9a97b8"/>
+<path d="M 394 409 l 10 -5.5 v 11 z" fill="#9a97b8"/>
+<line x1="402" y1="409" x2="451" y2="409" stroke="#9a97b8" stroke-width="1.4"/>
+<path d="M 749 409 l 10 -5.5 v 11 z" fill="#9a97b8"/>
+<line x1="757" y1="409" x2="806" y2="409" stroke="#9a97b8" stroke-width="1.4"/>
+<rect x="60" y="472" width="522" height="108" rx="14" fill="#0e1a14" stroke="#1e3a2f" stroke-width="1.2"/>
+<circle cx="94" cy="506" r="6.5" fill="none" stroke="#3ddc97" stroke-width="2.4"/>
+<line x1="99" y1="511" x2="111" y2="523" stroke="#3ddc97" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="105" y1="517" x2="110" y2="514" stroke="#3ddc97" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="108.5" y1="520.5" x2="113" y2="517.5" stroke="#3ddc97" stroke-width="2.4" stroke-linecap="round"/>
+<text x="126" y="518" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#3ddc97" text-anchor="start" >Keys never leave your machine</text>
+<text x="126" y="546" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >Private keys live only in keys.json (0600), in your plugin data dir.</text>
+<rect x="606" y="472" width="534" height="108" rx="14" fill="#141126" stroke="#7c6cff" stroke-width="1.2"/>
+<circle cx="646" cy="510" r="7" fill="none" stroke="#7c6cff" stroke-width="2"/>
+<text x="666" y="518" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#7c6cff" text-anchor="start" >Official hosted registry — v1.1 (planned)</text>
+<text x="666" y="546" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >A Supabase mirror schema ships in the repo today: supabase/schema.sql.</text>
+</svg>

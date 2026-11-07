@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="GUILD deliveries: signed and end-to-end encrypted">
+<defs>
+<radialGradient id="glowV" cx="12%" cy="-10%" r="80%">
+<stop offset="0%" stop-color="#7c6cff" stop-opacity="0.28"/>
+<stop offset="60%" stop-color="#7c6cff" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="glowG" cx="95%" cy="-5%" r="75%">
+<stop offset="0%" stop-color="#e8b34b" stop-opacity="0.20"/>
+<stop offset="60%" stop-color="#e8b34b" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="cardG" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#121222"/>
+<stop offset="100%" stop-color="#0d0d1a"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="520" fill="#07070d"/>
+<rect width="1200" height="520" fill="url(#glowV)"/>
+<rect width="1200" height="520" fill="url(#glowG)"/>
+<text x="60" y="74" font-family="Georgia, 'Times New Roman', serif" font-size="33" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Signed. Encrypted. Never readable by the registry.</text>
+<text x="60" y="108" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >Delivery content travels end-to-end between builders. The registry stores ciphertext it cannot read.</text>
+<rect x="60" y="150" width="258" height="218" rx="16" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<path d="M 85 195 C 89 179, 93 179, 96 190 C 98 196, 102 198, 106 184" fill="none" stroke="#e8b34b" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="85" y1="201" x2="109" y2="201" stroke="#e8b34b" stroke-width="2.4" stroke-linecap="round"/>
+<text x="82" y="242" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#f2f1fa" text-anchor="start" >1 · The author</text>
+<text x="82" y="267" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#f2f1fa" text-anchor="start" >signs</text>
+<text x="82" y="300" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >Ed25519 signature over the</text>
+<text x="82" y="322" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >delivery — and over the</text>
+<text x="82" y="344" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >exact skills it covers.</text>
+<line x1="319" y1="206" x2="325" y2="206" stroke="#9a97b8" stroke-width="2"/>
+<path d="M 333 206 l -10 -5.5 v 11 z" fill="#9a97b8"/>
+<rect x="334" y="150" width="258" height="218" rx="16" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<path d="M 364 188 v-4 a7 7 0 0 1 14 0 v4" fill="none" stroke="#7c6cff" stroke-width="2.4"/>
+<rect x="360" y="188" width="22" height="15" rx="3.5" fill="none" stroke="#7c6cff" stroke-width="2.4"/>
+<circle cx="371" cy="194" r="2.4" fill="#7c6cff"/>
+<line x1="371" y1="196" x2="371" y2="199.5" stroke="#7c6cff" stroke-width="2.2" stroke-linecap="round"/>
+<text x="356" y="242" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#f2f1fa" text-anchor="start" >2 · Content is</text>
+<text x="356" y="267" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#f2f1fa" text-anchor="start" >encrypted</text>
+<text x="356" y="300" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >X25519 + HKDF-SHA256 + HMAC</text>
+<text x="356" y="322" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >stream with encrypt-then-</text>
+<text x="356" y="344" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >MAC (GUILD-E2E-1).</text>
+<line x1="593" y1="206" x2="599" y2="206" stroke="#9a97b8" stroke-width="2"/>
+<path d="M 607 206 l -10 -5.5 v 11 z" fill="#9a97b8"/>
+<rect x="608" y="150" width="258" height="218" rx="16" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<ellipse cx="645" cy="181" rx="11" ry="4.2" fill="none" stroke="#9a97b8" stroke-width="2.2"/>
+<path d="M 634 181 v16 c0 2.3 4.9 4.2 11 4.2 s11 -1.9 11 -4.2 v-16" fill="none" stroke="#9a97b8" stroke-width="2.2"/>
+<path d="M 634 189 c0 2.3 4.9 4.2 11 4.2 s11 -1.9 11 -4.2" fill="none" stroke="#9a97b8" stroke-width="2.2"/>
+<text x="630" y="242" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#f2f1fa" text-anchor="start" >3 · Registry stores</text>
+<text x="630" y="267" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#f2f1fa" text-anchor="start" >ciphertext</text>
+<text x="630" y="300" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >Ciphertext, nonce and MAC —</text>
+<text x="630" y="322" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >nothing else. A tampered</text>
+<text x="630" y="344" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >envelope fails its</text>
+<text x="630" y="366" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >fingerprint check.</text>
+<line x1="867" y1="206" x2="873" y2="206" stroke="#9a97b8" stroke-width="2"/>
+<path d="M 881 206 l -10 -5.5 v 11 z" fill="#9a97b8"/>
+<rect x="882" y="150" width="258" height="218" rx="16" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<circle cx="914" cy="184" r="6.5" fill="none" stroke="#3ddc97" stroke-width="2.4"/>
+<line x1="919" y1="189" x2="931" y2="201" stroke="#3ddc97" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="925" y1="195" x2="930" y2="192" stroke="#3ddc97" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="928.5" y1="198.5" x2="933" y2="195.5" stroke="#3ddc97" stroke-width="2.4" stroke-linecap="round"/>
+<text x="904" y="242" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#f2f1fa" text-anchor="start" >4 · Only the owner</text>
+<text x="904" y="267" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#f2f1fa" text-anchor="start" >opens it</text>
+<text x="904" y="300" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >The owner decrypts locally,</text>
+<text x="904" y="322" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >verifies the signature,</text>
+<text x="904" y="344" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >then accepts — or returns</text>
+<text x="904" y="366" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >it with notes.</text>
+<rect x="60" y="398" width="1080" height="78" rx="14" fill="#141126" stroke="#7c6cff" stroke-width="1.2"/>
+<text x="92" y="432" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c6cff" text-anchor="start" letter-spacing="2" >HONEST LABEL</text>
+<text x="92" y="458" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >GUILD-E2E-1 is a pure-Python stdlib construction, validated against RFC test vectors — it is NOT an externally audited library.</text>
+</svg>

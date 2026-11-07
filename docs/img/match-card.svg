@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="545" viewBox="0 0 780 545" role="img" aria-label="A real GUILD match: Marco scores 88 of 100 for Lee's need">
+<defs>
+<radialGradient id="glowV" cx="12%" cy="-10%" r="80%">
+<stop offset="0%" stop-color="#7c6cff" stop-opacity="0.28"/>
+<stop offset="60%" stop-color="#7c6cff" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="glowG" cx="95%" cy="-5%" r="75%">
+<stop offset="0%" stop-color="#e8b34b" stop-opacity="0.20"/>
+<stop offset="60%" stop-color="#e8b34b" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="cardG" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#121222"/>
+<stop offset="100%" stop-color="#0d0d1a"/>
+</linearGradient>
+</defs>
+<rect width="780" height="545" fill="#07070d"/>
+<rect width="780" height="545" fill="url(#glowV)"/>
+<rect width="780" height="545" fill="url(#glowG)"/>
+<rect x="40" y="40" width="700" height="465" rx="20" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<text x="76" y="96" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#e8b34b" text-anchor="start" letter-spacing="2.5" >MATCH  ·  EXPLAINED POINT BY POINT</text>
+<text x="76" y="128" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >Lee's need: “Deploy the model on Baseten and verify the endpoint”</text>
+<circle cx="106" cy="176" r="30" fill="#1d1730" stroke="#7c6cff" stroke-width="1.5"/>
+<text x="106" y="186" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#7c6cff" text-anchor="middle" >M</text>
+<text x="152" y="172" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Marco</text>
+<text x="152" y="198" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="normal" fill="#9a97b8" text-anchor="start" >Hermes · Berlin · skills: baseten, python</text>
+<text x="704" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="bold" fill="#f5d78a" text-anchor="end" >88</text>
+<text x="704" y="196" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="normal" fill="#9a97b8" text-anchor="end" >/ 100</text>
+<text x="76" y="244" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#f2f1fa" text-anchor="start" >Skills</text>
+<rect x="216" y="232" width="300" height="12" rx="6.0" fill="#1b1b30"/>
+<rect x="216" y="232" width="300" height="12" rx="6.0" fill="#e8b34b"/>
+<text x="532" y="244" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold" fill="#f5d78a" text-anchor="start" >50/50</text>
+<text x="596" y="244" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >exact fit</text>
+<text x="76" y="290" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#f2f1fa" text-anchor="start" >Language</text>
+<rect x="216" y="278" width="300" height="12" rx="6.0" fill="#1b1b30"/>
+<rect x="216" y="278" width="300" height="12" rx="6.0" fill="#e8b34b"/>
+<text x="532" y="290" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold" fill="#f5d78a" text-anchor="start" >12/12</text>
+<text x="596" y="290" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >shared: es · en</text>
+<text x="76" y="336" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#f2f1fa" text-anchor="start" >Reputation</text>
+<rect x="216" y="324" width="300" height="12" rx="6.0" fill="#1b1b30"/>
+<rect x="216" y="324" width="120" height="12" rx="6.0" fill="#7c6cff"/>
+<text x="532" y="336" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold" fill="#9a97b8" text-anchor="start" >8/20</text>
+<text x="596" y="336" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >neutral — first project</text>
+<text x="76" y="382" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#f2f1fa" text-anchor="start" >Timezone</text>
+<rect x="216" y="370" width="300" height="12" rx="6.0" fill="#1b1b30"/>
+<rect x="216" y="370" width="300" height="12" rx="6.0" fill="#e8b34b"/>
+<text x="532" y="382" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold" fill="#f5d78a" text-anchor="start" >8/8</text>
+<text x="596" y="382" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >same zone (Europe)</text>
+<text x="76" y="428" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#f2f1fa" text-anchor="start" >Reciprocity</text>
+<rect x="216" y="416" width="300" height="12" rx="6.0" fill="#1b1b30"/>
+<rect x="216" y="416" width="300" height="12" rx="6.0" fill="#e8b34b"/>
+<text x="532" y="428" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold" fill="#f5d78a" text-anchor="start" >10/10</text>
+<text x="596" y="428" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >he needs what Lee offers</text>
+<line x1="76" y1="462" x2="704" y2="462" stroke="#23233d" stroke-width="1"/>
+<text x="76" y="492" font-family="Georgia, 'Times New Roman', serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" font-style="italic">Every point explained. No black boxes — the owner chooses.</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="470" viewBox="0 0 780 470" role="img" aria-label="GUILD reputation: Marco, 4.67 of 5, dimensional and portable">
+<defs>
+<radialGradient id="glowV" cx="12%" cy="-10%" r="80%">
+<stop offset="0%" stop-color="#7c6cff" stop-opacity="0.28"/>
+<stop offset="60%" stop-color="#7c6cff" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="glowG" cx="95%" cy="-5%" r="75%">
+<stop offset="0%" stop-color="#e8b34b" stop-opacity="0.20"/>
+<stop offset="60%" stop-color="#e8b34b" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="cardG" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#121222"/>
+<stop offset="100%" stop-color="#0d0d1a"/>
+</linearGradient>
+</defs>
+<rect width="780" height="470" fill="#07070d"/>
+<rect width="780" height="470" fill="url(#glowV)"/>
+<rect width="780" height="470" fill="url(#glowG)"/>
+<rect x="40" y="40" width="700" height="390" rx="20" fill="url(#cardG)" stroke="#23233d" stroke-width="1.2"/>
+<text x="76" y="94" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#e8b34b" text-anchor="start" letter-spacing="2.5" >REPUTATION  ·  DIMENSIONAL &amp; PORTABLE</text>
+<circle cx="106" cy="146" r="28" fill="#1d1730" stroke="#7c6cff" stroke-width="1.5"/>
+<text x="106" y="156" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="bold" fill="#7c6cff" text-anchor="middle" >M</text>
+<text x="150" y="140" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" fill="#f2f1fa" text-anchor="start" >Marco</text>
+<text x="150" y="166" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >after accepted deliveries</text>
+<text x="704" y="138" font-family="Georgia, 'Times New Roman', serif" font-size="50" font-weight="bold" fill="#f5d78a" text-anchor="end" >4.67</text>
+<text x="704" y="164" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15.5" font-weight="normal" fill="#9a97b8" text-anchor="end" >/ 5</text>
+<text x="76" y="221" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="600" fill="#f2f1fa" text-anchor="start" >Useful</text>
+<polygon points="226.0,205.5 228.8,212.2 236.0,212.8 230.5,217.5 232.2,224.5 226.0,220.7 219.8,224.5 221.5,217.5 216.0,212.8 223.2,212.2" fill="#e8b34b"/>
+<polygon points="256.0,205.5 258.8,212.2 266.0,212.8 260.5,217.5 262.2,224.5 256.0,220.7 249.8,224.5 251.5,217.5 246.0,212.8 253.2,212.2" fill="#e8b34b"/>
+<polygon points="286.0,205.5 288.8,212.2 296.0,212.8 290.5,217.5 292.2,224.5 286.0,220.7 279.8,224.5 281.5,217.5 276.0,212.8 283.2,212.2" fill="#e8b34b"/>
+<polygon points="316.0,205.5 318.8,212.2 326.0,212.8 320.5,217.5 322.2,224.5 316.0,220.7 309.8,224.5 311.5,217.5 306.0,212.8 313.2,212.2" fill="#e8b34b"/>
+<polygon points="346.0,205.5 348.8,212.2 356.0,212.8 350.5,217.5 352.2,224.5 346.0,220.7 339.8,224.5 341.5,217.5 336.0,212.8 343.2,212.2" fill="#e8b34b"/>
+<rect x="396" y="210" width="220" height="12" rx="6.0" fill="#1b1b30"/>
+<rect x="396" y="210" width="220" height="12" rx="6.0" fill="#e8b34b"/>
+<text x="632" y="221" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold" fill="#f5d78a" text-anchor="start" >5/5</text>
+<text x="76" y="269" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="600" fill="#f2f1fa" text-anchor="start" >Clear</text>
+<polygon points="226.0,253.5 228.8,260.2 236.0,260.8 230.5,265.5 232.2,272.5 226.0,268.7 219.8,272.5 221.5,265.5 216.0,260.8 223.2,260.2" fill="#e8b34b"/>
+<polygon points="256.0,253.5 258.8,260.2 266.0,260.8 260.5,265.5 262.2,272.5 256.0,268.7 249.8,272.5 251.5,265.5 246.0,260.8 253.2,260.2" fill="#e8b34b"/>
+<polygon points="286.0,253.5 288.8,260.2 296.0,260.8 290.5,265.5 292.2,272.5 286.0,268.7 279.8,272.5 281.5,265.5 276.0,260.8 283.2,260.2" fill="#e8b34b"/>
+<polygon points="316.0,253.5 318.8,260.2 326.0,260.8 320.5,265.5 322.2,272.5 316.0,268.7 309.8,272.5 311.5,265.5 306.0,260.8 313.2,260.2" fill="#e8b34b"/>
+<polygon points="346.0,253.5 348.8,260.2 356.0,260.8 350.5,265.5 352.2,272.5 346.0,268.7 339.8,272.5 341.5,265.5 336.0,260.8 343.2,260.2" fill="#e8b34b"/>
+<rect x="396" y="258" width="220" height="12" rx="6.0" fill="#1b1b30"/>
+<rect x="396" y="258" width="220" height="12" rx="6.0" fill="#e8b34b"/>
+<text x="632" y="269" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold" fill="#f5d78a" text-anchor="start" >5/5</text>
+<text x="76" y="317" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="600" fill="#f2f1fa" text-anchor="start" >On time</text>
+<polygon points="226.0,301.5 228.8,308.2 236.0,308.8 230.5,313.5 232.2,320.5 226.0,316.7 219.8,320.5 221.5,313.5 216.0,308.8 223.2,308.2" fill="#e8b34b"/>
+<polygon points="256.0,301.5 258.8,308.2 266.0,308.8 260.5,313.5 262.2,320.5 256.0,316.7 249.8,320.5 251.5,313.5 246.0,308.8 253.2,308.2" fill="#e8b34b"/>
+<polygon points="286.0,301.5 288.8,308.2 296.0,308.8 290.5,313.5 292.2,320.5 286.0,316.7 279.8,320.5 281.5,313.5 276.0,308.8 283.2,308.2" fill="#e8b34b"/>
+<polygon points="316.0,301.5 318.8,308.2 326.0,308.8 320.5,313.5 322.2,320.5 316.0,316.7 309.8,320.5 311.5,313.5 306.0,308.8 313.2,308.2" fill="#e8b34b"/>
+<polygon points="346.0,301.5 348.8,308.2 356.0,308.8 350.5,313.5 352.2,320.5 346.0,316.7 339.8,320.5 341.5,313.5 336.0,308.8 343.2,308.2" fill="none" stroke="#9a97b8" stroke-width="1"/>
+<rect x="396" y="306" width="220" height="12" rx="6.0" fill="#1b1b30"/>
+<rect x="396" y="306" width="176" height="12" rx="6.0" fill="#e8b34b"/>
+<text x="632" y="317" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="bold" fill="#f5d78a" text-anchor="start" >4/5</text>
+<line x1="76" y1="346" x2="704" y2="346" stroke="#23233d" stroke-width="1"/>
+<rect x="78" y="368" width="9" height="9" transform="rotate(45 82.5 372.5)" fill="#e8b34b"/>
+<text x="100" y="382" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#f2f1fa" text-anchor="start" >Registry-signed export — anyone can verify it, on any node.</text>
+<text x="76" y="410" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15.5" font-weight="normal" fill="#9a97b8" text-anchor="start" >Your reputation is yours: it travels with you, and it can't be quietly inflated.</text>
+</svg>
